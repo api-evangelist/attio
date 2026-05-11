@@ -1,0 +1,66 @@
+aid: attio
+name: Attio
+description: >-
+  Attio is a modern, flexible, and data-driven customer relationship management
+  (CRM) platform that lets revenue teams build a CRM around their unique data
+  model with customizable objects, attributes, lists, and workflows. Attio
+  syncs contacts and companies from email and calendar, enriches them with
+  data, and powers reporting, sequences, and automations. The Attio REST API
+  exposes full CRUD access to records, lists, objects, attributes, tasks,
+  notes, threads, comments, and webhooks using Bearer token authentication
+  and a public OpenAPI specification.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - CRM
+  - Customer Relationship Management
+  - Sales
+  - Contacts
+  - Companies
+  - Pipeline
+  - Workflows
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: attio:rest-api
+    name: Attio REST API
+    description: >-
+      Public REST API for the Attio CRM platform with full CRUD access to
+      records, objects, attributes, lists, entries, tasks, notes, threads,
+      comments, workspace members, and webhooks. Authentication uses a
+      Bearer access token in the Authorization header and the API publishes
+      a public OpenAPI specification.
+    humanURL: https://docs.attio.com/rest-api
+    baseURL: https://api.attio.com
+    tags:
+      - CRM
+      - Sales
+      - Contacts
+      - Companies
+      - Lists
+      - Workflows
+    properties:
+      - type: Documentation
+        url: https://docs.attio.com/rest-api
+      - type: OpenAPI
+        url: https://docs.attio.com/rest-api/endpoint-reference/openapi
+      - type: Developer Platform
+        url: https://attio.com/platform/developers
+      - type: Authentication
+        url: https://docs.attio.com/rest-api/how-to/authentication
+
+common:
+  - type: Website
+    url: https://attio.com
+  - type: Documentation
+    url: https://docs.attio.com
+  - type: Pricing
+    url: https://attio.com/pricing
+  - type: Sign Up
+    url: https://app.attio.com/welcome/sign-in
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
