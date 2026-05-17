@@ -59,7 +59,7 @@ common:
     url: https://docs.attio.com
   - type: Pricing
     url: https://attio.com/pricing
-  - type: Sign Up
+  - type: SignUp
     url: https://app.attio.com/welcome/sign-in
 maintainers:
   - FN: Kin Lane
