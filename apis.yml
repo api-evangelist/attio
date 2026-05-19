@@ -53,6 +53,10 @@ apis:
         url: https://docs.attio.com/rest-api/how-to/authentication
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/attio
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/attio
   - type: Website
     url: https://attio.com
   - type: Documentation
