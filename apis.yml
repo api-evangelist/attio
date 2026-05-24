@@ -65,6 +65,8 @@ common:
     url: https://attio.com/pricing
   - type: SignUp
     url: https://app.attio.com/welcome/sign-in
+  - type: LLMsTxt
+    url: https://docs.attio.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
