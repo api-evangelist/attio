@@ -1,0 +1,841 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Attio REST API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Objects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List objects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/objects"
+          },
+          "docs": "List objects"
+        },
+        {
+          "info": {
+            "name": "Create an object",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/objects"
+          },
+          "docs": "Create an object"
+        },
+        {
+          "info": {
+            "name": "Get an object",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/objects/:object_id",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              }
+            ]
+          },
+          "docs": "Get an object"
+        },
+        {
+          "info": {
+            "name": "Update an object",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.attio.com/v2/objects/:object_id",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              }
+            ]
+          },
+          "docs": "Update an object"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Records",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/objects/:object_id/records",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              }
+            ]
+          },
+          "docs": "List records"
+        },
+        {
+          "info": {
+            "name": "Create a record",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/objects/:object_id/records",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              }
+            ]
+          },
+          "docs": "Create a record"
+        },
+        {
+          "info": {
+            "name": "Upsert a record",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.attio.com/v2/objects/:object_id/records",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              }
+            ]
+          },
+          "docs": "Upsert a record"
+        },
+        {
+          "info": {
+            "name": "Get a record",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/objects/:object_id/records/:record_id",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              },
+              {
+                "name": "record_id",
+                "value": "",
+                "type": "path",
+                "description": "Attio record ID"
+              }
+            ]
+          },
+          "docs": "Get a record"
+        },
+        {
+          "info": {
+            "name": "Update record (overwrite multiselect)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.attio.com/v2/objects/:object_id/records/:record_id",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              },
+              {
+                "name": "record_id",
+                "value": "",
+                "type": "path",
+                "description": "Attio record ID"
+              }
+            ]
+          },
+          "docs": "Update record (overwrite multiselect)"
+        },
+        {
+          "info": {
+            "name": "Update record (append multiselect)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.attio.com/v2/objects/:object_id/records/:record_id",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              },
+              {
+                "name": "record_id",
+                "value": "",
+                "type": "path",
+                "description": "Attio record ID"
+              }
+            ]
+          },
+          "docs": "Update record (append multiselect)"
+        },
+        {
+          "info": {
+            "name": "Delete a record",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.attio.com/v2/objects/:object_id/records/:record_id",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              },
+              {
+                "name": "record_id",
+                "value": "",
+                "type": "path",
+                "description": "Attio record ID"
+              }
+            ]
+          },
+          "docs": "Delete a record"
+        },
+        {
+          "info": {
+            "name": "Search records",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/objects/:object_id/records/search",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              }
+            ]
+          },
+          "docs": "Search records"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Attributes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List attributes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/attributes"
+          },
+          "docs": "List attributes"
+        },
+        {
+          "info": {
+            "name": "Create an attribute",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/attributes"
+          },
+          "docs": "Create an attribute"
+        },
+        {
+          "info": {
+            "name": "Get an attribute",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/attributes/:attribute_id",
+            "params": [
+              {
+                "name": "attribute_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get an attribute"
+        },
+        {
+          "info": {
+            "name": "Update an attribute",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.attio.com/v2/attributes/:attribute_id",
+            "params": [
+              {
+                "name": "attribute_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update an attribute"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Lists",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all lists",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/lists"
+          },
+          "docs": "List all lists"
+        },
+        {
+          "info": {
+            "name": "Create a list",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/lists"
+          },
+          "docs": "Create a list"
+        },
+        {
+          "info": {
+            "name": "Get a list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/lists/:list_id",
+            "params": [
+              {
+                "name": "list_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a list"
+        },
+        {
+          "info": {
+            "name": "Update a list",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.attio.com/v2/lists/:list_id",
+            "params": [
+              {
+                "name": "list_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a list"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Entries",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List entries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/lists/:list_id/entries",
+            "params": [
+              {
+                "name": "list_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List entries"
+        },
+        {
+          "info": {
+            "name": "Create an entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/lists/:list_id/entries",
+            "params": [
+              {
+                "name": "list_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create an entry"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Notes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List notes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/notes"
+          },
+          "docs": "List notes"
+        },
+        {
+          "info": {
+            "name": "Create a note",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/notes"
+          },
+          "docs": "Create a note"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tasks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tasks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/tasks"
+          },
+          "docs": "List tasks"
+        },
+        {
+          "info": {
+            "name": "Create a task",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/tasks"
+          },
+          "docs": "Create a task"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Comments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a comment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/comments"
+          },
+          "docs": "Create a comment"
+        },
+        {
+          "info": {
+            "name": "Get a comment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/comments/:comment_id",
+            "params": [
+              {
+                "name": "comment_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a comment"
+        },
+        {
+          "info": {
+            "name": "Delete a comment",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.attio.com/v2/comments/:comment_id",
+            "params": [
+              {
+                "name": "comment_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a comment"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Threads",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List threads",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/threads"
+          },
+          "docs": "List threads"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List webhooks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/webhooks"
+          },
+          "docs": "List webhooks"
+        },
+        {
+          "info": {
+            "name": "Create a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/webhooks"
+          },
+          "docs": "Create a webhook"
+        },
+        {
+          "info": {
+            "name": "Get a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/webhooks/:webhook_id",
+            "params": [
+              {
+                "name": "webhook_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a webhook"
+        },
+        {
+          "info": {
+            "name": "Update a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.attio.com/v2/webhooks/:webhook_id",
+            "params": [
+              {
+                "name": "webhook_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a webhook"
+        },
+        {
+          "info": {
+            "name": "Delete a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.attio.com/v2/webhooks/:webhook_id",
+            "params": [
+              {
+                "name": "webhook_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a webhook"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Workspace Members",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List workspace members",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/workspace-members"
+          },
+          "docs": "List workspace members"
+        },
+        {
+          "info": {
+            "name": "Get a workspace member",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/workspace-members/:member_id",
+            "params": [
+              {
+                "name": "member_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a workspace member"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Meta",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Identify current access token and workspace",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/meta/identify"
+          },
+          "docs": "Identify current access token and workspace"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Files",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List files",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/files"
+          },
+          "docs": "List files"
+        },
+        {
+          "info": {
+            "name": "Upload a file",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/files"
+          },
+          "docs": "Upload a file"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Meetings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List meetings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/meetings"
+          },
+          "docs": "List meetings"
+        },
+        {
+          "info": {
+            "name": "Get a meeting",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/meetings/:meeting_id",
+            "params": [
+              {
+                "name": "meeting_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a meeting"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Call Recordings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List call recordings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/meetings/:meeting_id/call-recordings",
+            "params": [
+              {
+                "name": "meeting_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List call recordings"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "OAuth",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Exchange code for access token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/oauth/token"
+          },
+          "docs": "Exchange code for access token"
+        },
+        {
+          "info": {
+            "name": "Introspect token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/oauth/introspect"
+          },
+          "docs": "Introspect token"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
