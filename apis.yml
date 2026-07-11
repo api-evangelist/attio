@@ -53,6 +53,10 @@ apis:
         url: https://docs.attio.com/rest-api/how-to/authentication
 
 common:
+  - type: DomainSecurity
+    url: security/attio-domain-security.yml
+  - type: Authentication
+    url: authentication/attio-authentication.yml
   - type: OAuthScopes
     url: scopes/attio-scopes.yml
   - type: GitHubOrganization
