@@ -1,0 +1,53 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/attio-openapi.yml
+schemes:
+- name: oauth2
+  source: openapi/attio-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://app.attio.com/authorize
+    tokenUrl: https://api.attio.com/oauth/token
+scopes:
+- scope: list_configuration:read-write
+  description: Manage lists
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/attio-openapi.yml
+- scope: list_entry:read-write
+  description: Manage list entries
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/attio-openapi.yml
+- scope: object_configuration:read
+  description: Read object configuration
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/attio-openapi.yml
+- scope: object_configuration:read-write
+  description: Manage object configuration
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/attio-openapi.yml
+- scope: record_permission:read
+  description: Read records
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/attio-openapi.yml
+- scope: record_permission:read-write
+  description: Manage records
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/attio-openapi.yml
+- scope: webhook:read-write
+  description: Manage webhooks
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/attio-openapi.yml

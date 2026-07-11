@@ -53,6 +53,8 @@ apis:
         url: https://docs.attio.com/rest-api/how-to/authentication
 
 common:
+  - type: OAuthScopes
+    url: scopes/attio-scopes.yml
   - type: GitHubOrganization
     url: https://github.com/attio
   - type: LinkedIn
