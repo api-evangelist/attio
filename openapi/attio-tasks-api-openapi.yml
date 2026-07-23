@@ -1,0 +1,62 @@
+openapi: 3.1.0
+info:
+  title: Attio REST Attributes Tasks API
+  description: 'Best-effort OpenAPI 3.1 description of the Attio REST API (v2).
+
+    Derived from public documentation at https://docs.attio.com/rest-api and the
+
+    documentation index at https://docs.attio.com/llms.txt. Attio is a flexible CRM
+
+    with objects, records, lists, attributes and webhooks.
+
+    '
+  version: '2'
+  contact:
+    name: Attio Docs
+    url: https://docs.attio.com/rest-api
+servers:
+- url: https://api.attio.com
+  description: Attio API production
+security:
+- bearerAuth: []
+- oauth2: []
+tags:
+- name: Tasks
+paths:
+  /v2/tasks:
+    get:
+      tags:
+      - Tasks
+      summary: List tasks
+      operationId: listTasks
+      responses:
+        '200':
+          description: Tasks returned
+    post:
+      tags:
+      - Tasks
+      summary: Create a task
+      operationId: createTask
+      responses:
+        '201':
+          description: Task created
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Attio API key or OAuth bearer token.
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://app.attio.com/authorize
+          tokenUrl: https://api.attio.com/oauth/token
+          scopes:
+            object_configuration:read: Read object configuration
+            object_configuration:read-write: Manage object configuration
+            record_permission:read: Read records
+            record_permission:read-write: Manage records
+            list_configuration:read-write: Manage lists
+            list_entry:read-write: Manage list entries
+            webhook:read-write: Manage webhooks
