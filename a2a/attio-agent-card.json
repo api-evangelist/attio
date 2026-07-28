@@ -1,0 +1,61 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "streaming": true
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "description": "AI CRM. Connect via MCP server or REST API.",
+  "documentationUrl": "https://docs.attio.com",
+  "iconUrl": "https://attio.com/brand/v1/attio-logomark.svg",
+  "name": "Attio",
+  "provider": {
+    "organization": "Attio",
+    "url": "https://attio.com"
+  },
+  "security": [
+    {
+      "oauth2": []
+    },
+    {
+      "apiKey": []
+    }
+  ],
+  "securitySchemes": {
+    "apiKey": {
+      "apiKeySecurityScheme": {
+        "description": "API key via Bearer token",
+        "location": "header",
+        "name": "Authorization"
+      }
+    },
+    "oauth2": {
+      "oauth2SecurityScheme": {
+        "description": "OAuth 2.0 authorization code flow",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://app.attio.com/authorize",
+            "scopes": {},
+            "tokenUrl": "https://app.attio.com/oauth/token"
+          }
+        }
+      }
+    }
+  },
+  "skills": [],
+  "supportedInterfaces": [
+    {
+      "protocolBinding": "HTTP+JSON",
+      "protocolVersion": "1.0",
+      "url": "https://mcp.attio.com/mcp"
+    }
+  ],
+  "url": "https://attio.com",
+  "version": "1.0.0"
+}
