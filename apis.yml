@@ -25,33 +25,262 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: attio:rest-api
-    name: Attio REST API
-    description: >-
-      Public REST API for the Attio CRM platform with full CRUD access to
-      records, objects, attributes, lists, entries, tasks, notes, threads,
-      comments, workspace members, and webhooks. Authentication uses a
-      Bearer access token in the Authorization header and the API publishes
-      a public OpenAPI specification.
-    humanURL: https://docs.attio.com/rest-api
-    baseURL: https://api.attio.com
-    tags:
-      - CRM
-      - Sales
-      - Contacts
-      - Companies
-      - Lists
-      - Workflows
-    properties:
-      - type: Documentation
-        url: https://docs.attio.com/rest-api
-      - type: OpenAPI
-        url: https://docs.attio.com/rest-api/endpoint-reference/openapi
-      - type: Developer Platform
-        url: https://attio.com/platform/developers
-      - type: Authentication
-        url: https://docs.attio.com/rest-api/how-to/authentication
-
+- aid: attio:attio-attributes-api
+  name: Attio Attributes API
+  description: The Attributes API from Attio — 2 operation(s) for attributes.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - Attributes
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-attributes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-call-recordings-api
+  name: Attio Call Recordings API
+  description: The Call Recordings API from Attio — 1 operation(s) for call recordings.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - Call Recordings
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-call-recordings-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-comments-api
+  name: Attio Comments API
+  description: The Comments API from Attio — 2 operation(s) for comments.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - Comments
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-comments-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-entries-api
+  name: Attio Entries API
+  description: The Entries API from Attio — 1 operation(s) for entries.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - Entries
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-entries-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-files-api
+  name: Attio Files API
+  description: The Files API from Attio — 1 operation(s) for files.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - Files
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-files-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-lists-api
+  name: Attio Lists API
+  description: The Lists API from Attio — 2 operation(s) for lists.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - Lists
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-lists-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-meetings-api
+  name: Attio Meetings API
+  description: The Meetings API from Attio — 2 operation(s) for meetings.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - Meetings
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-meetings-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-meta-api
+  name: Attio Meta API
+  description: The Meta API from Attio — 1 operation(s) for meta.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - Meta
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-meta-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-notes-api
+  name: Attio Notes API
+  description: The Notes API from Attio — 1 operation(s) for notes.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - Notes
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-notes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-oauth-api
+  name: Attio OAuth API
+  description: The OAuth API from Attio — 2 operation(s) for oauth.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - OAuth
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-oauth-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-objects-api
+  name: Attio Objects API
+  description: The Objects API from Attio — 2 operation(s) for objects.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - Objects
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-objects-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-records-api
+  name: Attio Records API
+  description: The Records API from Attio — 3 operation(s) for records.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - Records
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-records-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-tasks-api
+  name: Attio Tasks API
+  description: The Tasks API from Attio — 1 operation(s) for tasks.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - Tasks
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-tasks-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-threads-api
+  name: Attio Threads API
+  description: The Threads API from Attio — 1 operation(s) for threads.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - Threads
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-threads-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-webhooks-api
+  name: Attio Webhooks API
+  description: The Webhooks API from Attio — 2 operation(s) for webhooks.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-webhooks-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-workspace-members-api
+  name: Attio Workspace Members API
+  description: The Workspace Members API from Attio — 2 operation(s) for workspace members.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - Workspace Members
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-workspace-members-api-openapi.yml
+  - type: Documentation
+    url: https://docs.attio.com/rest-api
+  - type: Developer Platform
+    url: https://attio.com/platform/developers
+  - type: Authentication
+    url: https://docs.attio.com/rest-api/how-to/authentication
 common:
   - type: AgentCard
     url: a2a/attio-a2a.yml
