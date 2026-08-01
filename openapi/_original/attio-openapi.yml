@@ -1,0 +1,461 @@
+openapi: 3.1.0
+info:
+  title: Attio REST API
+  description: |
+    Best-effort OpenAPI 3.1 description of the Attio REST API (v2).
+    Derived from public documentation at https://docs.attio.com/rest-api and the
+    documentation index at https://docs.attio.com/llms.txt. Attio is a flexible CRM
+    with objects, records, lists, attributes and webhooks.
+  version: "2"
+  contact:
+    name: Attio Docs
+    url: https://docs.attio.com/rest-api
+servers:
+  - url: https://api.attio.com
+    description: Attio API production
+tags:
+  - name: Objects
+  - name: Records
+  - name: Attributes
+  - name: Lists
+  - name: Entries
+  - name: Notes
+  - name: Tasks
+  - name: Comments
+  - name: Threads
+  - name: Webhooks
+  - name: Workspace Members
+  - name: Meta
+  - name: Files
+  - name: Meetings
+  - name: Call Recordings
+  - name: OAuth
+paths:
+  /v2/objects:
+    get:
+      tags: [Objects]
+      summary: List objects
+      operationId: listObjects
+      responses:
+        '200':
+          description: Objects returned
+    post:
+      tags: [Objects]
+      summary: Create an object
+      operationId: createObject
+      responses:
+        '201':
+          description: Object created
+  /v2/objects/{object_id}:
+    parameters:
+      - $ref: '#/components/parameters/ObjectId'
+    get:
+      tags: [Objects]
+      summary: Get an object
+      operationId: getObject
+      responses:
+        '200':
+          description: Object returned
+    patch:
+      tags: [Objects]
+      summary: Update an object
+      operationId: updateObject
+      responses:
+        '200':
+          description: Object updated
+  /v2/objects/{object_id}/records:
+    parameters:
+      - $ref: '#/components/parameters/ObjectId'
+    get:
+      tags: [Records]
+      summary: List records
+      operationId: listRecords
+      responses:
+        '200':
+          description: Records returned
+    post:
+      tags: [Records]
+      summary: Create a record
+      operationId: createRecord
+      responses:
+        '201':
+          description: Record created
+    put:
+      tags: [Records]
+      summary: Upsert a record
+      operationId: upsertRecord
+      responses:
+        '200':
+          description: Record upserted
+  /v2/objects/{object_id}/records/{record_id}:
+    parameters:
+      - $ref: '#/components/parameters/ObjectId'
+      - $ref: '#/components/parameters/RecordId'
+    get:
+      tags: [Records]
+      summary: Get a record
+      operationId: getRecord
+      responses:
+        '200':
+          description: Record returned
+    patch:
+      tags: [Records]
+      summary: Update record (append multiselect)
+      operationId: updateRecordAppend
+      responses:
+        '200':
+          description: Record updated
+    put:
+      tags: [Records]
+      summary: Update record (overwrite multiselect)
+      operationId: updateRecordOverwrite
+      responses:
+        '200':
+          description: Record updated
+    delete:
+      tags: [Records]
+      summary: Delete a record
+      operationId: deleteRecord
+      responses:
+        '204':
+          description: Record deleted
+  /v2/objects/{object_id}/records/search:
+    parameters:
+      - $ref: '#/components/parameters/ObjectId'
+    post:
+      tags: [Records]
+      summary: Search records
+      operationId: searchRecords
+      responses:
+        '200':
+          description: Search results
+  /v2/attributes:
+    get:
+      tags: [Attributes]
+      summary: List attributes
+      operationId: listAttributes
+      responses:
+        '200':
+          description: Attributes returned
+    post:
+      tags: [Attributes]
+      summary: Create an attribute
+      operationId: createAttribute
+      responses:
+        '201':
+          description: Attribute created
+  /v2/attributes/{attribute_id}:
+    parameters:
+      - in: path
+        name: attribute_id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Attributes]
+      summary: Get an attribute
+      operationId: getAttribute
+      responses:
+        '200':
+          description: Attribute returned
+    patch:
+      tags: [Attributes]
+      summary: Update an attribute
+      operationId: updateAttribute
+      responses:
+        '200':
+          description: Attribute updated
+  /v2/lists:
+    get:
+      tags: [Lists]
+      summary: List all lists
+      operationId: listLists
+      responses:
+        '200':
+          description: Lists returned
+    post:
+      tags: [Lists]
+      summary: Create a list
+      operationId: createList
+      responses:
+        '201':
+          description: List created
+  /v2/lists/{list_id}:
+    parameters:
+      - in: path
+        name: list_id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Lists]
+      summary: Get a list
+      operationId: getList
+      responses:
+        '200':
+          description: List returned
+    patch:
+      tags: [Lists]
+      summary: Update a list
+      operationId: updateList
+      responses:
+        '200':
+          description: List updated
+  /v2/lists/{list_id}/entries:
+    parameters:
+      - in: path
+        name: list_id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Entries]
+      summary: List entries
+      operationId: listEntries
+      responses:
+        '200':
+          description: Entries returned
+    post:
+      tags: [Entries]
+      summary: Create an entry
+      operationId: createEntry
+      responses:
+        '201':
+          description: Entry created
+  /v2/notes:
+    get:
+      tags: [Notes]
+      summary: List notes
+      operationId: listNotes
+      responses:
+        '200':
+          description: Notes returned
+    post:
+      tags: [Notes]
+      summary: Create a note
+      operationId: createNote
+      responses:
+        '201':
+          description: Note created
+  /v2/tasks:
+    get:
+      tags: [Tasks]
+      summary: List tasks
+      operationId: listTasks
+      responses:
+        '200':
+          description: Tasks returned
+    post:
+      tags: [Tasks]
+      summary: Create a task
+      operationId: createTask
+      responses:
+        '201':
+          description: Task created
+  /v2/comments:
+    post:
+      tags: [Comments]
+      summary: Create a comment
+      operationId: createComment
+      responses:
+        '201':
+          description: Comment created
+  /v2/comments/{comment_id}:
+    parameters:
+      - in: path
+        name: comment_id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Comments]
+      summary: Get a comment
+      operationId: getComment
+      responses:
+        '200':
+          description: Comment returned
+    delete:
+      tags: [Comments]
+      summary: Delete a comment
+      operationId: deleteComment
+      responses:
+        '204':
+          description: Deleted
+  /v2/threads:
+    get:
+      tags: [Threads]
+      summary: List threads
+      operationId: listThreads
+      responses:
+        '200':
+          description: Threads returned
+  /v2/webhooks:
+    get:
+      tags: [Webhooks]
+      summary: List webhooks
+      operationId: listWebhooks
+      responses:
+        '200':
+          description: Webhooks returned
+    post:
+      tags: [Webhooks]
+      summary: Create a webhook
+      operationId: createWebhook
+      responses:
+        '201':
+          description: Webhook created
+  /v2/webhooks/{webhook_id}:
+    parameters:
+      - in: path
+        name: webhook_id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Webhooks]
+      summary: Get a webhook
+      operationId: getWebhook
+      responses:
+        '200':
+          description: Webhook returned
+    patch:
+      tags: [Webhooks]
+      summary: Update a webhook
+      operationId: updateWebhook
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags: [Webhooks]
+      summary: Delete a webhook
+      operationId: deleteWebhook
+      responses:
+        '204':
+          description: Deleted
+  /v2/workspace-members:
+    get:
+      tags: [Workspace Members]
+      summary: List workspace members
+      operationId: listWorkspaceMembers
+      responses:
+        '200':
+          description: Workspace members returned
+  /v2/workspace-members/{member_id}:
+    parameters:
+      - in: path
+        name: member_id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Workspace Members]
+      summary: Get a workspace member
+      operationId: getWorkspaceMember
+      responses:
+        '200':
+          description: Workspace member returned
+  /v2/meta/identify:
+    get:
+      tags: [Meta]
+      summary: Identify current access token and workspace
+      operationId: identify
+      responses:
+        '200':
+          description: Identity returned
+  /v2/files:
+    get:
+      tags: [Files]
+      summary: List files
+      operationId: listFiles
+      responses:
+        '200':
+          description: Files returned
+    post:
+      tags: [Files]
+      summary: Upload a file
+      operationId: uploadFile
+      responses:
+        '201':
+          description: File uploaded
+  /v2/meetings:
+    get:
+      tags: [Meetings]
+      summary: List meetings
+      operationId: listMeetings
+      responses:
+        '200':
+          description: Meetings returned
+  /v2/meetings/{meeting_id}:
+    parameters:
+      - in: path
+        name: meeting_id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Meetings]
+      summary: Get a meeting
+      operationId: getMeeting
+      responses:
+        '200':
+          description: Meeting returned
+  /v2/meetings/{meeting_id}/call-recordings:
+    parameters:
+      - in: path
+        name: meeting_id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Call Recordings]
+      summary: List call recordings
+      operationId: listCallRecordings
+      responses:
+        '200':
+          description: Call recordings returned
+  /oauth/token:
+    post:
+      tags: [OAuth]
+      summary: Exchange code for access token
+      operationId: oauthToken
+      responses:
+        '200':
+          description: Token returned
+  /oauth/introspect:
+    post:
+      tags: [OAuth]
+      summary: Introspect token
+      operationId: oauthIntrospect
+      responses:
+        '200':
+          description: Introspection result
+components:
+  parameters:
+    ObjectId:
+      in: path
+      name: object_id
+      required: true
+      schema:
+        type: string
+      description: Object ID or slug (e.g. "people", "companies", "deals", or a custom object).
+    RecordId:
+      in: path
+      name: record_id
+      required: true
+      schema:
+        type: string
+      description: Attio record ID
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Attio API key or OAuth bearer token.
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://app.attio.com/authorize
+          tokenUrl: https://api.attio.com/oauth/token
+          scopes:
+            object_configuration:read: Read object configuration
+            object_configuration:read-write: Manage object configuration
+            record_permission:read: Read records
+            record_permission:read-write: Manage records
+            list_configuration:read-write: Manage lists
+            list_entry:read-write: Manage list entries
+            webhook:read-write: Manage webhooks
+security:
+  - bearerAuth: []
+  - oauth2: []
