@@ -1,28 +1,24 @@
 aid: attio
 name: Attio
-description: >-
-  Attio is a modern, flexible, and data-driven customer relationship management
-  (CRM) platform that lets revenue teams build a CRM around their unique data
-  model with customizable objects, attributes, lists, and workflows. Attio
-  syncs contacts and companies from email and calendar, enriches them with
-  data, and powers reporting, sequences, and automations. The Attio REST API
-  exposes full CRUD access to records, lists, objects, attributes, tasks,
-  notes, threads, comments, and webhooks using Bearer token authentication
-  and a public OpenAPI specification.
+description: Attio is a modern, flexible, and data-driven customer relationship management (CRM) platform
+  that lets revenue teams build a CRM around their unique data model with customizable objects, attributes,
+  lists, and workflows. Attio syncs contacts and companies from email and calendar, enriches them with
+  data, and powers reporting, sequences, and automations. The Attio REST API exposes full CRUD access
+  to records, lists, objects, attributes, tasks, notes, threads, comments, and webhooks using Bearer token
+  authentication and a public OpenAPI specification.
 type: Index
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
-  - CRM
-  - Customer Relationship Management
-  - Sales
-  - Contacts
-  - Companies
-  - Pipeline
-  - Workflows
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/apis.yml
+- CRM
+- Customer Relationship Management
+- Sales
+- Contacts
+- Companies
+- Pipeline
+- Workflows
+url: https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/apis.yml
 created: '2026-05-11'
-modified: '2026-05-11'
+modified: '2026-08-08'
 specificationVersion: '0.19'
 apis:
 - aid: attio:attio-attributes-api
@@ -282,32 +278,40 @@ apis:
   - type: Authentication
     url: https://docs.attio.com/rest-api/how-to/authentication
 common:
-  - type: AgentCard
-    url: a2a/attio-a2a.yml
-    name: A2A Agent Card
-    description: Agent Card served at /.well-known/agent-card.json (flavored against A2A 1.0.0).
-  - type: AgenticAccess
-    url: agentic-access/attio-agentic-access.yml
-  - type: DomainSecurity
-    url: security/attio-domain-security.yml
-  - type: Authentication
-    url: authentication/attio-authentication.yml
-  - type: OAuthScopes
-    url: scopes/attio-scopes.yml
-  - type: GitHubOrganization
-    url: https://github.com/attio
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/attio
-  - type: Website
-    url: https://attio.com
-  - type: Documentation
-    url: https://docs.attio.com
-  - type: Pricing
-    url: https://attio.com/pricing
-  - type: Signup
-    url: https://app.attio.com/welcome/sign-in
-  - type: LlmsText
-    url: https://docs.attio.com/llms.txt
+- type: AgentCard
+  url: a2a/attio-a2a.yml
+  name: A2A Agent Card
+  description: Agent Card served at /.well-known/agent-card.json (flavored against A2A 1.0.0).
+- type: AgenticAccess
+  url: agentic-access/attio-agentic-access.yml
+- type: DomainSecurity
+  url: security/attio-domain-security.yml
+- type: Authentication
+  url: authentication/attio-authentication.yml
+- type: OAuthScopes
+  url: scopes/attio-scopes.yml
+- type: GitHubOrganization
+  url: https://github.com/attio
+- type: LinkedIn
+  url: https://www.linkedin.com/company/attio
+- type: Website
+  url: https://attio.com
+- type: Documentation
+  url: https://docs.attio.com
+- type: Pricing
+  url: https://attio.com/pricing
+- type: Signup
+  url: https://app.attio.com/welcome/sign-in
+- type: LlmsText
+  url: https://docs.attio.com/llms.txt
+- type: Plans
+  url: plans/attio-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/attio-rate-limits.yml
+- type: FinOps
+  url: finops/attio-finops.yml
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+x-merged-from:
+- attio-com
