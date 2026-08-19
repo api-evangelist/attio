@@ -1,0 +1,197 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Attio REST Attributes List Entries API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List Entries",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List entries",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/lists/:list/entries/query",
+            "params": [
+              {
+                "name": "list",
+                "value": "",
+                "type": "path",
+                "description": "The list ID or slug."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lists entries in a given list, with the option to filter and sort results."
+        },
+        {
+          "info": {
+            "name": "Create an entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/lists/:list/entries",
+            "params": [
+              {
+                "name": "list",
+                "value": "",
+                "type": "path",
+                "description": "The list ID or slug."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Adds a record to a list as a new list entry."
+        },
+        {
+          "info": {
+            "name": "Assert a list entry by parent",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.attio.com/v2/lists/:list/entries",
+            "params": [
+              {
+                "name": "list",
+                "value": "",
+                "type": "path",
+                "description": "The list ID or slug."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates or updates a list entry, keyed by its parent record."
+        },
+        {
+          "info": {
+            "name": "Get a list entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/lists/:list/entries/:entry_id",
+            "params": [
+              {
+                "name": "list",
+                "value": "",
+                "type": "path",
+                "description": "The list ID or slug."
+              },
+              {
+                "name": "entry_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Gets a single list entry by its entry_id."
+        },
+        {
+          "info": {
+            "name": "Update a list entry (overwrite multiselect values)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.attio.com/v2/lists/:list/entries/:entry_id",
+            "params": [
+              {
+                "name": "list",
+                "value": "",
+                "type": "path",
+                "description": "The list ID or slug."
+              },
+              {
+                "name": "entry_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a list entry, overwriting values on multiselect attributes."
+        },
+        {
+          "info": {
+            "name": "Update a list entry (append multiselect values)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.attio.com/v2/lists/:list/entries/:entry_id",
+            "params": [
+              {
+                "name": "list",
+                "value": "",
+                "type": "path",
+                "description": "The list ID or slug."
+              },
+              {
+                "name": "entry_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a list entry, appending values to multiselect attributes."
+        },
+        {
+          "info": {
+            "name": "Delete a list entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.attio.com/v2/lists/:list/entries/:entry_id",
+            "params": [
+              {
+                "name": "list",
+                "value": "",
+                "type": "path",
+                "description": "The list ID or slug."
+              },
+              {
+                "name": "entry_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes a list entry by its entry_id."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Attio REST Attributes Objects API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Objects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List objects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/objects"
+          },
+          "docs": "List objects"
+        },
+        {
+          "info": {
+            "name": "Create an object",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/objects"
+          },
+          "docs": "Create an object"
+        },
+        {
+          "info": {
+            "name": "Get an object",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/objects/:object_id",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              }
+            ]
+          },
+          "docs": "Get an object"
+        },
+        {
+          "info": {
+            "name": "Update an object",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.attio.com/v2/objects/:object_id",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              }
+            ]
+          },
+          "docs": "Update an object"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

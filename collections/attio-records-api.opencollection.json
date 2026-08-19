@@ -1,0 +1,200 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Attio REST Attributes Records API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Records",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/objects/:object_id/records",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              }
+            ]
+          },
+          "docs": "List records"
+        },
+        {
+          "info": {
+            "name": "Create a record",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/objects/:object_id/records",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              }
+            ]
+          },
+          "docs": "Create a record"
+        },
+        {
+          "info": {
+            "name": "Upsert a record",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.attio.com/v2/objects/:object_id/records",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              }
+            ]
+          },
+          "docs": "Upsert a record"
+        },
+        {
+          "info": {
+            "name": "Get a record",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.attio.com/v2/objects/:object_id/records/:record_id",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              },
+              {
+                "name": "record_id",
+                "value": "",
+                "type": "path",
+                "description": "Attio record ID"
+              }
+            ]
+          },
+          "docs": "Get a record"
+        },
+        {
+          "info": {
+            "name": "Update record (overwrite multiselect)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.attio.com/v2/objects/:object_id/records/:record_id",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              },
+              {
+                "name": "record_id",
+                "value": "",
+                "type": "path",
+                "description": "Attio record ID"
+              }
+            ]
+          },
+          "docs": "Update record (overwrite multiselect)"
+        },
+        {
+          "info": {
+            "name": "Update record (append multiselect)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.attio.com/v2/objects/:object_id/records/:record_id",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              },
+              {
+                "name": "record_id",
+                "value": "",
+                "type": "path",
+                "description": "Attio record ID"
+              }
+            ]
+          },
+          "docs": "Update record (append multiselect)"
+        },
+        {
+          "info": {
+            "name": "Delete a record",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.attio.com/v2/objects/:object_id/records/:record_id",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              },
+              {
+                "name": "record_id",
+                "value": "",
+                "type": "path",
+                "description": "Attio record ID"
+              }
+            ]
+          },
+          "docs": "Delete a record"
+        },
+        {
+          "info": {
+            "name": "Search records",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.attio.com/v2/objects/:object_id/records/search",
+            "params": [
+              {
+                "name": "object_id",
+                "value": "",
+                "type": "path",
+                "description": "Object ID or slug (e.g. \"people\", \"companies\", \"deals\", or a custom object)."
+              }
+            ]
+          },
+          "docs": "Search records"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
