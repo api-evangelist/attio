@@ -294,6 +294,16 @@ apis:
     url: https://attio.com/platform/developers
   - type: Authentication
     url: https://docs.attio.com/rest-api/how-to/authentication
+- aid: attio:attio-list-entries-api
+  name: Attio List Entries API
+  description: Entries within a list, referencing a parent record.
+  humanURL: https://docs.attio.com/rest-api
+  baseURL: https://api.attio.com
+  tags:
+  - List Entries
+  properties:
+  - type: OpenAPI
+    url: openapi/attio-list-entries-api-openapi.yml
 common:
 - type: AgentCard
   url: a2a/attio-a2a.yml
