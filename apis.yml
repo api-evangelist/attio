@@ -39,7 +39,7 @@ tags:
 - Sales
 - Contacts
 - Companies
-- Pipeline
+- Pipelines
 - Workflows
 tags_raw:
 - CRM
@@ -318,6 +318,8 @@ apis:
   humanURL: https://docs.attio.com/rest-api
   baseURL: https://api.attio.com
   tags:
+  - Authentication
+  tags_raw:
   - OAuth
   properties:
   - type: OpenAPI
