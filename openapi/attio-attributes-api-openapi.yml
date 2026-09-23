@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Attio REST Attributes API
   description: 'Best-effort OpenAPI 3.1 description of the Attio REST API (v2).
@@ -7,9 +7,7 @@ info:
 
     documentation index at https://docs.attio.com/llms.txt. Attio is a flexible CRM
 
-    with objects, records, lists, attributes and webhooks.
-
-    '
+    with objects, records, lists, attributes and webhooks.'
   version: '2'
   contact:
     name: Attio Docs

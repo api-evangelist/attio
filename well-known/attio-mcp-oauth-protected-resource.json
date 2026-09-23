@@ -1,0 +1,1 @@
+{"resource_name":"attio","resource":"https://mcp.attio.com/mcp","authorization_servers":["https://app.attio.com"],"scopes_supported":["mcp","offline_access","openid"],"resource_signing_alg_values_supported":["ES256"],"bearer_methods_supported":["header"]}

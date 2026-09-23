@@ -1,22 +1,8 @@
 {
   "provider": "attio",
   "sources": [
-    "attio-attributes-api-openapi.yml",
-    "attio-call-recordings-api-openapi.yml",
-    "attio-comments-api-openapi.yml",
-    "attio-entries-api-openapi.yml",
-    "attio-files-api-openapi.yml",
-    "attio-lists-api-openapi.yml",
-    "attio-meetings-api-openapi.yml",
-    "attio-meta-api-openapi.yml",
-    "attio-notes-api-openapi.yml",
-    "attio-oauth-api-openapi.yml",
-    "attio-objects-api-openapi.yml",
-    "attio-records-api-openapi.yml",
-    "attio-tasks-api-openapi.yml",
-    "attio-threads-api-openapi.yml",
-    "attio-webhooks-api-openapi.yml",
-    "attio-workspace-members-api-openapi.yml"
+    "_original/attio-openapi.yml",
+    "attio-list-entries-api-openapi.yml"
   ],
   "outputs": [
     "attio-attributes-api-openapi.yml",
@@ -34,11 +20,38 @@
     "attio-tasks-api-openapi.yml",
     "attio-threads-api-openapi.yml",
     "attio-webhooks-api-openapi.yml",
-    "attio-workspace-members-api-openapi.yml"
+    "attio-workspace-members-api-openapi.yml",
+    "attio-list-entries-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
-  "warnings": [],
-  "notes": [],
-  "skipped": []
+  "warnings": [
+    "attio-list-entries-api-openapi.yml: previously refined output kept for 7 operation(s) no archived document covers (e.g. /lists/{list}/entries post, /lists/{list}/entries put, /lists/{list}/entries/query post); its other 0 operation(s) came from the archive and were dropped from it. The archive is incomplete for this provider \u2014 re-harvest to restore _original/ as the full source of truth."
+  ],
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "attio-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "superseded outputs removed: attio-o-auth-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 17 total)"
+  ],
+  "skipped": [
+    "attio-attributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "attio-call-recordings-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "attio-comments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "attio-entries-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "attio-files-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "attio-lists-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "attio-meetings-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "attio-meta-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "attio-notes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "attio-o-auth-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "attio-objects-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "attio-records-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "attio-tasks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "attio-threads-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "attio-webhooks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "attio-workspace-members-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
