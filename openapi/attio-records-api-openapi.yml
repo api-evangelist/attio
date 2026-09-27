@@ -97,13 +97,6 @@ paths:
           description: Search results
 components:
   parameters:
-    ObjectId:
-      in: path
-      name: object_id
-      required: true
-      schema:
-        type: string
-      description: Object ID or slug (e.g. "people", "companies", "deals", or a custom object).
     RecordId:
       in: path
       name: record_id
@@ -111,6 +104,13 @@ components:
       schema:
         type: string
       description: Attio record ID
+    ObjectId:
+      in: path
+      name: object_id
+      required: true
+      schema:
+        type: string
+      description: Object ID or slug (e.g. "people", "companies", "deals", or a custom object).
   securitySchemes:
     bearerAuth:
       type: http

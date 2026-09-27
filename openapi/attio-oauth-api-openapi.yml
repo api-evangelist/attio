@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Attio REST O Auth API
+  title: Attio REST OAuth API
   description: 'Best-effort OpenAPI 3.1 description of the Attio REST API (v2).
 
     Derived from public documentation at https://docs.attio.com/rest-api and the

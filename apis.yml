@@ -45,6 +45,7 @@ tags:
 - Companies
 - Pipelines
 - Workflows
+- A2A
 tags_raw:
 - CRM
 - Customer Relationship Management
@@ -53,6 +54,7 @@ tags_raw:
 - Companies
 - Pipeline
 - Workflows
+- A2A
 url: https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/apis.yml
 created: '2026-05-11'
 modified: '2026-08-08'
@@ -372,3 +374,10 @@ maintainers:
   email: kin@apievangelist.com
 x-merged-from:
 - attio-com
+x-a2a:
+  verified: true
+  probed: '2026-09-26'
+  url: "https://attio.com/.well-known/agent-card.json"
+  grade: "flavored"
+  protocol_version: "1.0"
+  control: 404
