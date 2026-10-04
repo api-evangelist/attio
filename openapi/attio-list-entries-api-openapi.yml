@@ -122,17 +122,17 @@ paths:
           description: The list entry was deleted.
 components:
   parameters:
-    EntryId:
-      name: entry_id
-      in: path
-      required: true
-      schema:
-        type: string
     List:
       name: list
       in: path
       required: true
       description: The list ID or slug.
+      schema:
+        type: string
+    EntryId:
+      name: entry_id
+      in: path
+      required: true
       schema:
         type: string
   securitySchemes:
