@@ -337,6 +337,9 @@ apis:
   - type: Authentication
     url: https://docs.attio.com/rest-api/how-to/authentication
 common:
+- type: CapabilityMap
+  url: capabilities/attio-capability-edges.yml
+  name: Attio Business Capability Map
 - type: AgentCard
   url: a2a/attio-a2a.yml
   name: A2A Agent Card

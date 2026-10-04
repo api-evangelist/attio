@@ -1,0 +1,36 @@
+slug: attio
+provider: Attio
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Records
+  spec_file: attio-records-api-openapi.yml
+  capability_id: BC-420.10
+  capability_id_l1: BC-420
+  capability_name: Customer Data Management
+  confidence: 0.82
+  evidence: POST /v2/objects/{object_id}/records createRecord; PUT /v2/objects/{object_id}/records upsertRecord
+    — 'Upsert a record'; POST .../records/search searchRecords
+  reason: Full CRUD plus upsert/search over CRM records (contacts, companies) — this is customer master/golden-record
+    data management in a CRM.
+- tag: Webhooks
+  spec_file: attio-webhooks-api-openapi.yml
+  capability_id: BC-4270.80
+  capability_id_l1: BC-4270
+  capability_name: Webhook & Event Subscription Management
+  confidence: 0.7
+  evidence: POST /v2/webhooks  createWebhook  Create a webhook; DELETE /v2/webhooks/{webhook_id}  deleteWebhook
+  reason: CRUD lifecycle over outbound webhook subscriptions exposed by a SaaS vendor's public REST API
+    — matches 'Lifecycle of outbound webhook subscriptions, event schemas, and delivery reliability'.
+    Confidence held below 0.8 because the surface is generic plumbing and carries no event-schema or delivery-reliability
+    detail.
