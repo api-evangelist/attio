@@ -1,0 +1,561 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/attio/integrations
+- https://composio.dev/toolkits/attio
+checked:
+- https://composio.dev/toolkits/attio
+- https://monid.ai/tools/attio
+- https://n8n.io/integrations/attio/
+- https://zapier.com/apps/attio/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: attio
+  url: https://zapier.com/apps/attio/integrations
+  external_url: https://attio.com/
+  partner_tier: GOLD
+  triggers:
+  - key: call_recording_created
+    label: Call Recording Created
+  - key: list_entry_created
+    label: List Entry Created
+  - key: list_entry_deleted
+    label: List Entry Deleted
+  - key: list_entry_updated
+    label: List Entry Updated
+  - key: record_created
+    label: Record Created
+  - key: record_deleted
+    label: Record Deleted
+  - key: record_updated
+    label: Record Updated
+  - key: task_created
+    label: Task Created
+  actions:
+  - key: assert_list_entry
+    label: Create or Update List Entry by Parent Record
+  - key: assert_record
+    label: Create or Update Record
+  - key: create_list_entry
+    label: Create List Entry
+  - key: create_note
+    label: Create Note
+  - key: create_record
+    label: Create Record
+  - key: create_storage_location
+    label: Create Storage Location
+  - key: create_task
+    label: Create Task
+  - key: delete_list_entry
+    label: Delete List Entry
+  - key: update_list_entry
+    label: Update List Entry
+  - key: update_record_attributes
+    label: Update Record
+  - key: update_task
+    label: Update Task
+  searches:
+  - key: find_list_entry
+    label: Find List Entries
+  - key: find_record
+    label: Find Records
+- marketplace: composio
+  channel: agent-gateway
+  app: attio
+  url: https://composio.dev/toolkits/attio
+  identity: action-prefix
+  actions:
+  - key: ATTIO_ASSERT_COMPANY
+  - key: ATTIO_ASSERT_PERSON
+  - key: ATTIO_ASSERT_USER_RECORD
+  - key: ATTIO_ASSERT_WORKSPACE
+  - key: ATTIO_CREATE_ATTRIBUTE
+  - key: ATTIO_CREATE_COMMENT
+  - key: ATTIO_CREATE_COMPANY
+  - key: ATTIO_CREATE_DEAL_RECORD
+  - key: ATTIO_CREATE_LIST
+  - key: ATTIO_CREATE_NOTE
+  - key: ATTIO_CREATE_OBJECT
+  - key: ATTIO_CREATE_PERSON
+  - key: ATTIO_CREATE_RECORD
+  - key: ATTIO_CREATE_SELECT_OPTION
+  - key: ATTIO_CREATE_STATUS
+  - key: ATTIO_CREATE_TASK
+  - key: ATTIO_CREATE_USER_RECORD
+  - key: ATTIO_CREATE_WEBHOOK
+  - key: ATTIO_CREATE_WORKSPACE_RECORD
+  - key: ATTIO_DELETE_COMMENT
+  - key: ATTIO_DELETE_COMPANY
+  - key: ATTIO_DELETE_DEAL
+  - key: ATTIO_DELETE_ENTRY
+  - key: ATTIO_DELETE_NOTE
+  - key: ATTIO_DELETE_PERSON
+  - key: ATTIO_DELETE_RECORD
+  - key: ATTIO_DELETE_TASK
+  - key: ATTIO_DELETE_USER
+  - key: ATTIO_DELETE_WEBHOOK
+  - key: ATTIO_DELETE_WORKSPACE_RECORD
+  - key: ATTIO_FIND_RECORD
+  - key: ATTIO_GET_ATTRIBUTE
+  - key: ATTIO_GET_COMMENT
+  - key: ATTIO_GET_COMPANY
+  - key: ATTIO_GET_DEAL_RECORD
+  - key: ATTIO_GET_LIST
+  - key: ATTIO_GET_LIST_ENTRY
+  - key: ATTIO_GET_NOTE
+  - key: ATTIO_GET_OBJECT
+  - key: ATTIO_GET_RECORD_ENTRIES
+  - key: ATTIO_GET_SELF
+  - key: ATTIO_GET_TASK
+  - key: ATTIO_GET_V2_TASKS
+  - key: ATTIO_GET_WEBHOOK
+  - key: ATTIO_GET_WORKSPACE_MEMBER
+  - key: ATTIO_GET_WORKSPACE_RECORD
+  - key: ATTIO_LIST_ATTRIBUTES
+  - key: ATTIO_LIST_ATTRIBUTE_OPTIONS
+  - key: ATTIO_LIST_ATTRIBUTE_STATUSES
+  - key: ATTIO_LIST_CALL_RECORDINGS
+  - key: ATTIO_LIST_COMPANIES
+  - key: ATTIO_LIST_COMPANY_ATTRIBUTE_VALUES
+  - key: ATTIO_LIST_COMPANY_RECORD_ENTRIES
+  - key: ATTIO_LIST_DEAL_ENTRIES
+  - key: ATTIO_LIST_DEAL_RECORDS
+  - key: ATTIO_LIST_DEAL_RECORD_ATTRIBUTE_VALUES
+  - key: ATTIO_LIST_LISTS
+  - key: ATTIO_LIST_LIST_ENTRY_ATTRIBUTE_VALUES
+  - key: ATTIO_LIST_MEETINGS
+  - key: ATTIO_LIST_NOTES
+  - key: ATTIO_LIST_OBJECTS
+  - key: ATTIO_LIST_PEOPLE_ATTRIBUTE_VALUES
+  - key: ATTIO_LIST_PEOPLE_RECORD_ENTRIES
+  - key: ATTIO_LIST_RECORDS
+  - key: ATTIO_LIST_RECORD_ATTRIBUTE_VALUES
+  - key: ATTIO_LIST_THREADS
+  - key: ATTIO_LIST_USER_RECORDS
+  - key: ATTIO_LIST_USER_RECORD_ENTRIES
+  - key: ATTIO_LIST_WEBHOOKS
+  - key: ATTIO_LIST_WORKSPACE_MEMBERS
+  - key: ATTIO_LIST_WORKSPACE_RECORDS
+  - key: ATTIO_LIST_WORKSPACE_RECORD_ATTRIBUTE_VALUES
+  - key: ATTIO_LIST_WORKSPACE_RECORD_ENTRIES
+  - key: ATTIO_PATCH_RECORD
+  - key: ATTIO_PATCH_V2_LISTS_LIST_ENTRIES_ENTRY_ID
+  - key: ATTIO_PEOPLE_GET_PERSON
+  - key: ATTIO_PEOPLE_LIST_PERSONS
+  - key: ATTIO_POST_V2_LISTS_LIST_ENTRIES
+  - key: ATTIO_POST_V2_LISTS_LIST_ENTRIES_QUERY
+  - key: ATTIO_POST_V2_OBJECTS_OBJECT_RECORDS_QUERY
+  - key: ATTIO_PUT_V2_LISTS_LIST_ENTRIES
+  - key: ATTIO_PUT_V2_LISTS_LIST_ENTRIES_ENTRY_ID
+  - key: ATTIO_PUT_V2_OBJECTS_OBJECT_RECORDS
+  - key: ATTIO_PUT_V2_OBJECTS_OBJECT_RECORDS_RECORD_ID
+  - key: ATTIO_QUERY_RECORDS
+  - key: ATTIO_SEARCH_RECORDS
+  - key: ATTIO_UPDATE_ATTRIBUTE
+  - key: ATTIO_UPDATE_COMPANY
+  - key: ATTIO_UPDATE_DEAL_RECORD
+  - key: ATTIO_UPDATE_LIST
+  - key: ATTIO_UPDATE_OBJECT
+  - key: ATTIO_UPDATE_PERSON
+  - key: ATTIO_UPDATE_RECORD
+  - key: ATTIO_UPDATE_SELECT_OPTION
+  - key: ATTIO_UPDATE_STATUS
+  - key: ATTIO_UPDATE_TASK
+  - key: ATTIO_UPDATE_USER_RECORD
+  - key: ATTIO_UPDATE_WEBHOOK
+  - key: ATTIO_UPDATE_WORKSPACE_RECORD
+edges:
+- partner_name: Typeform
+  partner: typeform
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/typeform
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.typeform.com/signup?utm_medium=referral&utm_source=zapier&utm_campaign=zapier_integration&utm_content=marketplace
+- partner_name: Gmail
+  partner: gmail
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/gmail
+  direction: third-party
+  category: Email
+  partner_url: https://mail.google.com/
+- partner_name: Tally
+  partner: tally
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/tally
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://try.tally.so/zapier
+- partner_name: Notion
+  partner: notion
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/notion
+  direction: third-party
+  category: Task Management
+  partner_url: https://www.notion.so/
+- partner_name: Airtable
+  partner: airtable
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/airtable
+  direction: third-party
+  category: Databases
+  partner_url: https://airtable.com/
+- partner_name: Apollo
+  partner: apollo
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/apollo
+  direction: third-party
+  category: Sales & CRM
+  partner_url: https://www.apollo.io/
+- partner_name: lemlist
+  partner: lemlist
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/lemlist
+  direction: third-party
+  category: Drip Emails
+  partner_url: https://lemlist.com/
+- partner_name: Mailchimp
+  partner: mailchimp
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/mailchimp
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://mailchimp.com/
+- partner_name: Calendly
+  partner: calendly
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/calendly
+  direction: third-party
+  category: Scheduling & Booking
+  partner_url: https://calendly.com/?utm_medium=partner&utm_source=zapier&utm_campaign=main_partner_page&utm_content=main_inbound_link
+- partner_name: LinkedIn Ads
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/linkedin-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://www.linkedin.com/
+- partner_name: Instantly
+  partner: instantly-ai
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/instantly
+  direction: third-party
+  category: Email
+  partner_url: https://instantly.ai/
+- partner_name: Slack
+  partner: slack
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/slack
+  direction: third-party
+  category: Team Chat
+  partner_url: https://slack.com/
+- partner_name: Fathom
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/fathom
+  direction: third-party
+  category: AI Meeting Assistants
+  partner_url: https://fathom.video/users/sign_up?utm_campaign=apipartners&utm_source=apipartner&utm_medium=CTA&utm_content=zapierlisting&utm_date=260714
+- partner_name: Fillout Forms
+  partner: fillout
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/fillout
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.fillout.com/?ref=zapier
+- partner_name: HubSpot
+  partner: hubspot
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/hubspot
+  direction: third-party
+  category: Marketing Automation
+  partner_url: http://www.hubspot.com/
+- partner_name: Google Forms
+  partner: google-forms
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/google-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://google.com/
+- partner_name: Google Calendar
+  partner: google-calendar
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/google-calendar
+  direction: third-party
+  category: Calendar
+  partner_url: https://calendar.google.com/
+- partner_name: Webflow
+  partner: webflow
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/webflow
+  direction: third-party
+  category: Website Builders
+  partner_url: https://webflow.com/
+- partner_name: Facebook Lead Ads
+  partner: facebook-lead-ads
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/facebook-lead-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://www.facebook.com/business/ads/lead-ads
+- partner_name: Zoom
+  partner: zoom
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/zoom
+  direction: third-party
+  category: Video Conferencing
+  partner_url: https://www.zoom.us/
+- partner_name: Intercom
+  partner: intercom
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/intercom
+  direction: third-party
+  category: Customer Support
+  partner_url: https://www.intercom.com/welcome-to-intercom?utm_source=external-website&utm_medium=partner&utm_campaign=20220503_all_oc_all_global_gl_all_all_par_extmktplc&utm_term=zapier
+- partner_name: Microsoft Outlook
+  partner: microsoft-outlook
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/microsoft-outlook
+  direction: third-party
+  category: Calendar
+  partner_url: https://outlook.live.com/
+- partner_name: PandaDoc
+  partner: pandadoc
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/pandadoc
+  direction: third-party
+  category: Documents
+  partner_url: https://www.pandadoc.com/integrations/zapier/?utm_source=zapier-marketplace&utm_medium=partner&utm_campaign=2020-11-inbd-marketplace-websitevisit-pandadoc-zapier-integration
+- partner_name: Google Drive
+  partner: google-drive
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/google-drive
+  direction: third-party
+  category: File Management & Storage
+  partner_url: https://www.google.com/drive/
+- partner_name: Gravity Forms
+  partner: gravity-forms
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/gravity-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.gravityforms.com/?utm_campaign=partners&utm_source=zapier-listing-learn-more&utm_medium=free-placement
+- partner_name: HeyReach
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/heyreach
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://app.heyreach.io/
+- partner_name: Google Sheets
+  partner: google-sheets
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/google-sheets
+  direction: third-party
+  category: Google
+  partner_url: http://sheets.google.com/
+- partner_name: Clay
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/clay
+  direction: third-party
+  category: Spreadsheets
+  partner_url: https://clay.run/
+- partner_name: Cal.com
+  partner: cal-com
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/calcom
+  direction: third-party
+  category: Scheduling & Booking
+  partner_url: http://go.cal.com/zapier
+- partner_name: ClickUp
+  partner: clickup
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/attio/integrations/clickup
+  direction: third-party
+  category: Project Management
+  partner_url: https://clickup.com/zapier
+templates:
+- title: Manage new Apollo contacts by creating or updating records in Attio
+  url: https://zapier.com/apps/apollo/integrations/attio/1641572/manage-new-apollo-contacts-by-creating-or-updating-records-in-attio
+  apps:
+  - apollo
+  - attio
+- title: Create new Attio notes from freshly added notes in your Granola folder
+  url: https://zapier.com/apps/attio/integrations/granola/255659266/create-new-attio-notes-from-freshly-added-notes-in-your-granola-folder
+  apps:
+  - granola
+  - attio
+- title: Create or update Attio people with new Webflow form submissions
+  url: https://zapier.com/apps/attio/integrations/webflow/1597263/create-or-update-attio-people-with-new-webflow-form-submissions
+  apps:
+  - webflow
+  - attio
+- title: Create tasks in Attio for new transcripts in Fathom
+  url: https://zapier.com/apps/attio/integrations/fathom/255597660/create-tasks-in-attio-for-new-transcripts-in-fathom
+  apps:
+  - fathom
+  - attio
+- title: Create or update Attio records each time new bookings are made in Cal.com
+  url: https://zapier.com/apps/attio/integrations/calcom/1703307/create-or-update-attio-records-each-time-new-bookings-are-made-in-calcom
+  apps:
+  - calcom
+  - attio
+- title: Create new Attio records from new submissions in Fillout Forms
+  url: https://zapier.com/apps/attio/integrations/fillout/255598950/create-new-attio-records-from-new-submissions-in-fillout-forms
+  apps:
+  - fillout
+  - attio
+- title: Create or update Attio records whenever new invitees are created in Calendly
+  url: https://zapier.com/apps/attio/integrations/calendly/1721174/create-or-update-attio-records-whenever-new-invitees-are-created-in-calendly
+  apps:
+  - calendly
+  - attio
+- title: Create or update Attio entries when new Stripe subscriptions occur
+  url: https://zapier.com/apps/attio/integrations/stripe/1657077/create-or-update-attio-entries-when-new-stripe-subscriptions-occur
+  apps:
+  - stripe
+  - attio
+- title: Create database items in Notion for new Attio entries
+  url: https://zapier.com/apps/attio/integrations/notion/1312719/create-database-items-in-notion-for-new-attio-entries
+  apps:
+  - attio
+  - notion
+- title: Add new Squarespace Forms form submissions to Attio as companies
+  url: https://zapier.com/apps/attio/integrations/squarespace-forms/1426684/add-new-squarespace-forms-form-submissions-to-attio-as-companies
+  apps:
+  - squarespace-forms
+  - attio
+- title: Create or update Attio records for new Intercom conversations
+  url: https://zapier.com/apps/attio/integrations/intercom/255613414/create-or-update-attio-records-for-new-intercom-conversations
+  apps:
+  - intercom
+  - attio
+- title: Create or update Attio records from new Google Sheets rows
+  url: https://zapier.com/apps/attio/integrations/google-sheets/255606891/create-or-update-attio-records-from-new-google-sheets-rows
+  apps:
+  - google-sheets
+  - attio
+template_total: 539
