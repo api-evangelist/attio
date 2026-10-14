@@ -5,8 +5,11 @@ source:
 - https://composio.dev/toolkits/attio
 checked:
 - https://composio.dev/toolkits/attio
+- https://fivetran.com/docs/activations/destinations/available-destinations/attio
+- https://hightouch.com/docs/destinations/attio
 - https://monid.ai/tools/attio
 - https://n8n.io/integrations/attio/
+- https://www.twilio.com/docs/segment/connections/destinations/catalog/actions-attio
 - https://zapier.com/apps/attio/integrations
 summary: null
 marketplace_apps:
@@ -497,6 +500,80 @@ edges:
   direction: third-party
   category: Project Management
   partner_url: https://clickup.com/zapier
+- partner_name: Twilio Segment
+  partner: segment
+  partner_match: aggregator
+  marketplace: coverage
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://www.twilio.com/docs/segment/connections/destinations/catalog/actions-attio
+  coverage_role:
+  - destination
+  cdp_signals:
+    destination:
+      catalog_entries:
+      - actions-attio
+      status: PUBLIC_BETA
+      partner_owned: true
+      connection_modes:
+      - cloud:server
+      - cloud:web
+      accepted_methods:
+      - Alias
+      - Group
+      - Identify
+      - Page
+      - Track
+  detected_by: sweep-cdp.py
+  first_seen: '2026-10-14'
+- partner_name: Hightouch
+  partner: hightouch
+  partner_match: aggregator
+  marketplace: coverage
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://hightouch.com/docs/destinations/attio
+  coverage_role:
+  - destination
+  cdp_signals:
+    destination:
+      catalog_entries:
+      - attio
+      status: released
+      sync_types:
+      - Companies
+      - Custom objects
+      - Deals
+      - People
+      - Users
+      - Workspaces
+      sync_modes:
+      - upsert
+  detected_by: sweep-cdp.py
+  first_seen: '2026-10-14'
+- partner_name: Census
+  partner: getcensus
+  partner_match: aggregator
+  marketplace: coverage
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://fivetran.com/docs/activations/destinations/available-destinations/attio
+  coverage_role:
+  - destination
+  cdp_signals:
+    destination:
+      catalog_entries:
+      - attio
+      sync_behaviours:
+      - update or create
+  detected_by: sweep-cdp.py
+  first_seen: '2026-10-14'
 templates:
 - title: Manage new Apollo contacts by creating or updating records in Attio
   url: https://zapier.com/apps/apollo/integrations/attio/1641572/manage-new-apollo-contacts-by-creating-or-updating-records-in-attio
