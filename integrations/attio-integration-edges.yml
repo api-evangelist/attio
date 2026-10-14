@@ -11,6 +11,7 @@ checked:
 - https://n8n.io/integrations/attio/
 - https://www.twilio.com/docs/segment/connections/destinations/catalog/actions-attio
 - https://zapier.com/apps/attio/integrations
+- okta/integrations/okta-integration-edges.yml
 summary: null
 marketplace_apps:
 - marketplace: zapier
@@ -503,11 +504,11 @@ edges:
 - partner_name: Twilio Segment
   partner: segment
   partner_match: aggregator
-  marketplace: coverage
+  marketplace: segment-partner-destinations
   channel: partner-built
-  direction: partner-built
-  type: coverage
-  relationship: connector-coverage
+  direction: third-party
+  type: marketplace
+  relationship: platform-app
   evidence: https://www.twilio.com/docs/segment/connections/destinations/catalog/actions-attio
   coverage_role:
   - destination
@@ -574,6 +575,30 @@ edges:
       - update or create
   detected_by: sweep-cdp.py
   first_seen: '2026-10-14'
+- partner_name: Okta (own)
+  partner: okta
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.okta.com/integrations/integrator-8571124_attio_1/
+  mirror_of: okta/integrations/okta-integration-edges.yml
+  apps:
+  - Attio
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Lifecycle Management
+  badges:
+  - OKTA_VERIFIED
+  features:
+  - CREATE
+  - DEACTIVATE
+  - GROUP_PUSH
+  - UPDATE
 templates:
 - title: Manage new Apollo contacts by creating or updating records in Attio
   url: https://zapier.com/apps/apollo/integrations/attio/1641572/manage-new-apollo-contacts-by-creating-or-updating-records-in-attio
