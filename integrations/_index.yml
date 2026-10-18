@@ -523,7 +523,7 @@
     - connectors/applications/attio
     vendor_link: https://attio.com/
     builder: Fivetran
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: attio-slack-own
   label: Slack (own)
