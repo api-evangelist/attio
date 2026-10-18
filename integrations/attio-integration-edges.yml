@@ -17,6 +17,8 @@ checked:
 - https://zapier.com/api/v4/apps/
 - https://zapier.com/apps/attio/integrations
 - okta/integrations/okta-integration-edges.yml
+- slack/integrations/slack-integration-edges.yml
+- zoom/integrations/zoom-integration-edges.yml
 summary: null
 marketplace_apps:
 - marketplace: zapier
@@ -713,6 +715,40 @@ edges:
     builder: Fivetran
   detected_by: sweep-data-integration.py
   first_seen: '2026-10-18'
+- partner_name: Slack (own)
+  partner: slack
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://slack.com/marketplace/A04GY8G396Y-attio
+  mirror_of: slack/integrations/slack-integration-edges.yml
+  apps:
+  - Attio
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Slack app
+- partner_name: Zoom (own)
+  partner: zoom
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.zoom.us/apps/YL6a8sYfSxyR-If9eHm1_w
+  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  apps:
+  - Attio
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Zoom app
 templates:
 - title: Manage new Apollo contacts by creating or updating records in Attio
   url: https://zapier.com/apps/apollo/integrations/attio/1641572/manage-new-apollo-contacts-by-creating-or-updating-records-in-attio
