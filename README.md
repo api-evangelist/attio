@@ -1,4 +1,4 @@
-# Attio (attio)
+# Attio
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,65 +66,164 @@
 
 Attio is a modern, flexible, and data-driven customer relationship management (CRM) platform that lets revenue teams build a CRM around their unique data model with customizable objects, attributes, lists, and workflows. Attio syncs contacts and companies from email and calendar, enriches them with data, and powers reporting, sequences, and automations. The Attio REST API exposes full CRUD access to records, lists, objects, attributes, tasks, notes, threads, comments, and webhooks using Bearer token authentication and a public OpenAPI specification.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/apis.yml)
+**Areas:** CRM · Sales · Contacts · Companies · Pipelines · Workflows · A2A
 
-## Scope
+## Attio on APIs.io
 
-- **Type:** Index
+Everything profiled for Attio is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/attio/](https://apis.io/providers/attio/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (17)
 
-- CRM
-- Customer Relationship Management
-- Sales
-- Contacts
-- Companies
-- Pipeline
-- Workflows
+- [Attio Attributes API](https://apis.io/apis/attio/attio-attributes-api/) — The Attributes API from Attio — 2 operation(s) for attributes.
+- [Attio Call Recordings API](https://apis.io/apis/attio/attio-call-recordings-api/) — The Call Recordings API from Attio — 1 operation(s) for call recordings.
+- [Attio Comments API](https://apis.io/apis/attio/attio-comments-api/) — The Comments API from Attio — 2 operation(s) for comments.
+- [Attio Entries API](https://apis.io/apis/attio/attio-entries-api/) — The Entries API from Attio — 1 operation(s) for entries.
+- [Attio Files API](https://apis.io/apis/attio/attio-files-api/) — The Files API from Attio — 1 operation(s) for files.
+- [Attio Lists API](https://apis.io/apis/attio/attio-lists-api/) — The Lists API from Attio — 2 operation(s) for lists.
+- [Attio Meetings API](https://apis.io/apis/attio/attio-meetings-api/) — The Meetings API from Attio — 2 operation(s) for meetings.
+- [Attio Meta API](https://apis.io/apis/attio/attio-meta-api/) — The Meta API from Attio — 1 operation(s) for meta.
+- [Attio Notes API](https://apis.io/apis/attio/attio-notes-api/) — The Notes API from Attio — 1 operation(s) for notes.
+- [Attio Objects API](https://apis.io/apis/attio/attio-objects-api/) — The Objects API from Attio — 2 operation(s) for objects.
+- [Attio Records API](https://apis.io/apis/attio/attio-records-api/) — The Records API from Attio — 3 operation(s) for records.
+- [Attio Tasks API](https://apis.io/apis/attio/attio-tasks-api/) — The Tasks API from Attio — 1 operation(s) for tasks.
+- [Attio Threads API](https://apis.io/apis/attio/attio-threads-api/) — The Threads API from Attio — 1 operation(s) for threads.
+- [Attio Webhooks API](https://apis.io/apis/attio/attio-webhooks-api/) — The Webhooks API from Attio — 2 operation(s) for webhooks.
+- [Attio Workspace Members API](https://apis.io/apis/attio/attio-workspace-members-api/) — The Workspace Members API from Attio — 2 operation(s) for workspace members.
+- [Attio List Entries API](https://apis.io/apis/attio/attio-list-entries-api/) — Entries within a list, referencing a parent record.
+- [Attio O Auth API](https://apis.io/apis/attio/attio-oauth-api/) — The OAuth API from Attio — 2 operation(s) for oauth.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### Attio REST API
+Model Context Protocol servers that expose the API to agents.
 
-Public REST API for the Attio CRM platform with full CRUD access to records, objects, attributes, lists, entries, tasks, notes, threads, comments, workspace members, and webhooks. Authentication uses a Bearer access token in the Authorization header and the API publishes a public OpenAPI specification.
+- [attio](https://apis.io/servers/attio/attio/)
 
-- **Human URL:** [https://docs.attio.com/rest-api](https://docs.attio.com/rest-api)
-- **Base URL:** `https://api.attio.com`
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- CRM
-- Sales
-- Contacts
-- Companies
-- Lists
-- Workflows
+- [Attio Agentic Access](https://apis.io/agentic-access/attio/attio-agentic-access/)
 
-#### Properties
+#### Collections (19)
 
-- [Documentation](https://docs.attio.com/rest-api)
-- [OpenAPI](https://docs.attio.com/rest-api/endpoint-reference/openapi) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Developer  Platform](https://attio.com/platform/developers)
-- [Authentication](https://docs.attio.com/rest-api/how-to/authentication)
-- [Postman Collection](collections/attio.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/attio.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-## Common Properties
+- [Attio REST API](https://apis.io/collections/attio/open-attio/)
+- [Attio REST Attributes API](https://apis.io/collections/attio/open-attio-attributes-api/)
+- [Attio REST Attributes Call Recordings API](https://apis.io/collections/attio/open-attio-call-recordings-api/)
+- [Attio REST API](https://apis.io/collections/attio/open-attio-com/)
+- [Attio REST Attributes Comments API](https://apis.io/collections/attio/open-attio-comments-api/)
+- [Attio REST Attributes Entries API](https://apis.io/collections/attio/open-attio-entries-api/)
+- [Attio REST Attributes Files API](https://apis.io/collections/attio/open-attio-files-api/)
+- [Attio REST Attributes List Entries API](https://apis.io/collections/attio/open-attio-list-entries-api/)
+- [Attio REST Attributes Lists API](https://apis.io/collections/attio/open-attio-lists-api/)
+- [Attio REST Attributes Meetings API](https://apis.io/collections/attio/open-attio-meetings-api/)
+- [Attio REST Attributes Meta API](https://apis.io/collections/attio/open-attio-meta-api/)
+- [Attio REST Attributes Notes API](https://apis.io/collections/attio/open-attio-notes-api/)
+- [Attio REST Attributes OAuth API](https://apis.io/collections/attio/open-attio-oauth-api/)
+- [Attio REST Attributes Objects API](https://apis.io/collections/attio/open-attio-objects-api/)
+- [Attio REST Attributes Records API](https://apis.io/collections/attio/open-attio-records-api/)
+- [Attio REST Attributes Tasks API](https://apis.io/collections/attio/open-attio-tasks-api/)
+- [Attio REST Attributes Threads API](https://apis.io/collections/attio/open-attio-threads-api/)
+- [Attio REST Attributes Webhooks API](https://apis.io/collections/attio/open-attio-webhooks-api/)
+- [Attio REST Attributes Workspace Members API](https://apis.io/collections/attio/open-attio-workspace-members-api/)
 
-- [GitHub Organization](https://github.com/attio)
-- [LinkedIn](https://www.linkedin.com/company/attio)
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Attio Authentication](https://apis.io/security/attio/attio-authentication/)
+- [Attio Domain Security](https://apis.io/security/attio/attio-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Attio Scopes](https://apis.io/scopes/attio/attio-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Attio Plans Pricing](https://apis.io/plans/attio/attio-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Attio Rate Limits](https://apis.io/rate-limits/attio/attio-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Attio Finops](https://apis.io/finops/attio/attio-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://attio.com)
 - [Documentation](https://docs.attio.com)
 - [Pricing](https://attio.com/pricing)
-- [Sign Up](https://app.attio.com/welcome/sign-in)
-- [L L Ms Txt](https://docs.attio.com/llms.txt)
+- [Blog](https://attio.com/blog)
+- [GitHub](https://github.com/attio)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 20.3** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 1.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 31.6 |
+
+**Agent readiness 45.3** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | flavored (partial credit) |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 21.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/attio/](https://apis.io/providers/attio/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Attio: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/attio/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
